@@ -97,11 +97,17 @@ form.addEventListener('submit', function(e) {
 //     -generate a random namber between 1 and 6
 //         -a number for the user
 const userNumber = Math.floor(Math.random() * 6) + 1;
-console.log(userNumber);
 //         -a number for the pc
 const pcNumber = Math.floor(Math.random() * 6) + 1;
-console.log(pcNumber);
 //     -check the numbers
+console.log(userNumber , pcNumber);
 //     -decide the winner
+let winner = 'tie'
 //         -the higher number win
+if (userNumber > pcNumber) {
+    winner = 'user WIN'
+} else if (userNumber < pcNumber) {
+    winner = 'pc WIN'
+}
 //     -print the result
+console.log(winner);
