@@ -84,6 +84,9 @@ form.addEventListener('submit', function(e) {
     
     //             -print result on page
     resultText.innerHTML = result;
+
+    document.querySelector('.card').style.display = 'block';
+    
     
 })
 
