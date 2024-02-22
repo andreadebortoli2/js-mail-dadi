@@ -32,7 +32,13 @@
 
 
 -Gioco dei dadi
-    -
+    -generate a random namber between 1 and 6
+        -a number for the user
+        -a number for the pc
+    -check the numbers
+    -decide the winner
+        -the higher number win
+    -print the result
 
 #Tools
 
@@ -40,3 +46,4 @@
 -array[]
 -FOR loop
 -if / else
+-math.random

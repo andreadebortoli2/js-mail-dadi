@@ -91,3 +91,17 @@ form.addEventListener('submit', function(e) {
 })
 
 //         -style the css
+
+
+// -Gioco dei dadi
+//     -generate a random namber between 1 and 6
+//         -a number for the user
+const userNumber = Math.floor(Math.random() * 6) + 1;
+console.log(userNumber);
+//         -a number for the pc
+const pcNumber = Math.floor(Math.random() * 6) + 1;
+console.log(pcNumber);
+//     -check the numbers
+//     -decide the winner
+//         -the higher number win
+//     -print the result
