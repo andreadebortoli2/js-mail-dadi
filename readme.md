@@ -40,6 +40,12 @@
         -the higher number win
     -print the result
 
+    -add HTML
+        -add boxes
+        -add button
+            -print at the button click
+    -style css
+
 #Tools
 
 -const / let

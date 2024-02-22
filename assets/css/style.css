@@ -8,6 +8,7 @@
 /* Common */
 .esercizio_1 {
     width: fit-content;
+    height: 200px;
     margin: 3rem auto;
 
     .card {
@@ -22,5 +23,50 @@
         & h3 {
             margin-bottom: 2rem;
         }
+    }
+}
+
+
+.esercizio_2 {
+
+    width: 800px;
+    margin: 2rem auto;
+
+    .row {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .box {
+        width: 200px;
+        height: 100px;
+        text-align: center;
+        border-radius: 1rem;
+    }
+
+    & h2 {
+        padding: 1rem 0;
+    }
+
+    .user_number_box {
+        background-color: paleturquoise;
+    }
+
+    .pc_number_box {
+        background-color: palevioletred;
+    }
+
+    & button {
+        height: fit-content;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    .winner_box {
+        margin: 1rem auto;
+        line-height: 100px;
+        background-color: palegoldenrod;
+        border: 5px solid transparent;
     }
 }

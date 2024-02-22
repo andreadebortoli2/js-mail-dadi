@@ -92,7 +92,8 @@ form.addEventListener('submit', function(e) {
 
 //         -style the css
 
-
+// +++++++++++++++++++++++++++++++
+/*
 // -Gioco dei dadi
 //     -generate a random namber between 1 and 6
 //         -a number for the user
@@ -111,3 +112,60 @@ if (userNumber > pcNumber) {
 }
 //     -print the result
 console.log(winner);
+*/
+//      -print all on page
+
+//User
+const userNumberBox = document.querySelector('.user_number_box');
+const userNumberText = document.createElement('div');
+userNumberBox.append(userNumberText);
+
+//Pc
+const pcNumberBox = document.querySelector('.pc_number_box');
+const pcNumberText = document.createElement('div');
+pcNumberBox.append(pcNumberText);
+
+//Winner
+const winnerBox = document.querySelector('.winner_box');
+const winnerText = document.createElement('h3');
+winnerBox.append(winnerText);
+
+
+
+let winner;
+
+
+
+
+
+const playBtn = document.getElementById('play_btn');
+
+playBtn.addEventListener('click', function() {
+
+    const userNumber = Math.floor(Math.random() * 6) + 1;
+    const pcNumber = Math.floor(Math.random() * 6) + 1;
+    
+    console.log(userNumber , pcNumber);
+    
+    userNumberText.innerHTML = userNumber;
+    pcNumberText.innerHTML = pcNumber;
+
+    if (userNumber > pcNumber) {
+        winner = 'user WIN';
+        winnerBox.style.borderColor = 'paleturquoise';
+    } else if (userNumber < pcNumber) {
+        winner = 'pc WIN';
+        winnerBox.style.borderColor = 'palevioletred';
+    } else if (userNumber == pcNumber) {
+        winner = 'TIE'
+        winnerBox.style.borderColor = 'palegreen';
+    };
+
+    console.log(winner);
+
+    winnerText.innerHTML = winner;
+
+
+});
+
+
