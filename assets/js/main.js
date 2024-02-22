@@ -57,13 +57,13 @@ const emailToCheck = document.getElementById('mail_to_check');
 //             -check list
 const authorizedMails = ['aaa@mail.com','bbb@mail.com','ccc@mail.com'];
 //             -get result
-let result = 'not authorize'
+let markup;
 //             -print result on page
-const resultBox = document.querySelector('.result_box')
+const resultBox = document.querySelector('.result_box');
 const resultText = document.createElement('div');
 resultBox.append(resultText);
 
-const form = document.querySelector('form')
+const form = document.querySelector('form');
 
 form.addEventListener('submit', function(e) {
     
@@ -72,23 +72,25 @@ form.addEventListener('submit', function(e) {
     for (let i = 0; i < authorizedMails.length; i++) {
         const authorizedMail = authorizedMails[i];
         
-        console.log(authorizedMail);
+        // console.log(authorizedMail);
+        // console.log(emailToCheck.value === authorizedMail);
         
         if (emailToCheck.value === authorizedMail) {
-            result = 'authorized'
-        }
-        
+            markup = 'Authorized';
+        } else {
+            markup = 'NOT Authorized';
+        };
     }
     
     console.log(result);
+
     
     //             -print result on page
-    resultText.innerHTML = result;
+    resultText.innerHTML = markup;
 
     document.querySelector('.card').style.display = 'block';
     
-    
-})
+});
 
 //         -style the css
 
@@ -130,12 +132,7 @@ const winnerBox = document.querySelector('.winner_box');
 const winnerText = document.createElement('h3');
 winnerBox.append(winnerText);
 
-
-
 let winner;
-
-
-
 
 
 const playBtn = document.getElementById('play_btn');
@@ -164,7 +161,6 @@ playBtn.addEventListener('click', function() {
     console.log(winner);
 
     winnerText.innerHTML = winner;
-
 
 });
 
