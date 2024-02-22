@@ -15,8 +15,11 @@
     -input mail
     -set mails list (array)
     -check the mails list (for)
-    -if mail part of mails list message OK
-    -if mail NOT part of mails list message NO
+        -if mail part of mails list message OK
+        -if mail NOT part of mails list message NO    
+     -show result on console
+         -set result as variable
+         -show result on console
 
     -BONUS
         -add input form for the mail
@@ -25,6 +28,7 @@
             -check list
             -get result
             -print result on page
+
 
 -Gioco dei dadi
     -
