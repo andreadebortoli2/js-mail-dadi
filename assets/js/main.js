@@ -1,11 +1,11 @@
 // console.log('Hi');
 
 // -Mail
-//     -input mail
-const mailToCheck = 'aaa';
+//     -input mail test
+// const mailToCheck = 'aaa';
 
-//     -set mails list (array)
-const authorizedMails = ['aaa','bbb','ccc','ddd'];
+//     -set mails list (array) test
+// const authorizedMails = ['aaa','bbb','ccc','ddd'];
 
 //     -check the mails list (for)
 
@@ -29,6 +29,7 @@ console.log('OK');
 //     -show result on console
 //         -set result as variable
 
+/*
 let result = 'not OK';
 
 for (let i = 0; i < authorizedMails.length; i++) {
@@ -45,14 +46,45 @@ for (let i = 0; i < authorizedMails.length; i++) {
 //         -show result on console
 
 console.log(result);
-
-
+*/
 
 
 //     -BONUS
 //         -add input form for the mail
 //         -add button to start the actions:
 //             -get mail
+const emailToCheck = document.getElementById('mail_to_check');
 //             -check list
+const authorizedMails = ['aaa@mail.com','bbb@mail.com','ccc@mail.com'];
 //             -get result
+let result = 'not authorize'
 //             -print result on page
+const resultBox = document.querySelector('.result_box')
+const resultText = document.createElement('div');
+resultBox.append(resultText);
+
+const form = document.querySelector('form')
+
+form.addEventListener('submit', function(e) {
+    
+    e.preventDefault()
+    
+    for (let i = 0; i < authorizedMails.length; i++) {
+        const authorizedMail = authorizedMails[i];
+        
+        console.log(authorizedMail);
+        
+        if (emailToCheck.value === authorizedMail) {
+            result = 'authorized'
+        }
+        
+    }
+    
+    console.log(result);
+    
+    //             -print result on page
+    resultText.innerHTML = result;
+    
+})
+
+//         -style the css

@@ -28,6 +28,7 @@
             -check list
             -get result
             -print result on page
+        -style the css
 
 
 -Gioco dei dadi
