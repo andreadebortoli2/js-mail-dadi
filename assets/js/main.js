@@ -9,15 +9,21 @@ const authorizedMails = ['aaa','bbb','ccc','ddd'];
 
 //     -check the mails list (for)
 
+
 for (let i = 0; i < authorizedMails.length; i++) {
     const authorizedMail = authorizedMails[i];
 
-    console.log(authorizedMail);
+    // console.log(authorizedMail);
+
+    if (mailToCheck !== authorizedMail) {
+        //     -if mail NOT part of mails list message NO
+        console.log('NOT OK')
+    } else {
+        //     -if mail part of mails list message OK
+        console.log('OK');
+    }
     
 }
-
-//     -if mail part of mails list message OK
-//     -if mail NOT part of mails list message NO
 
 //     -BONUS
 //         -add input form for the mail
