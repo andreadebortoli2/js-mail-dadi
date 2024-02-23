@@ -57,7 +57,7 @@ const emailToCheck = document.getElementById('mail_to_check');
 //             -check list
 const authorizedMails = ['aaa@mail.com','bbb@mail.com','ccc@mail.com'];
 //             -get result
-let markup;
+let markup = 'NOT Authorized';
 //             -print result on page
 const resultBox = document.querySelector('.result_box');
 const resultText = document.createElement('div');
@@ -77,13 +77,9 @@ form.addEventListener('submit', function(e) {
         
         if (emailToCheck.value === authorizedMail) {
             markup = 'Authorized';
-        } else {
-            markup = 'NOT Authorized';
+            document.querySelector('.card').style.backgroundColor = 'forestgreen'
         };
     }
-    
-    console.log(result);
-
     
     //             -print result on page
     resultText.innerHTML = markup;
